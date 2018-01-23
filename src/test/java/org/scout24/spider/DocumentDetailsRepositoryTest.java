@@ -4,10 +4,10 @@ package org.scout24.spider;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.cky.spider.model.DocumentDetails;
+import org.cky.spider.repository.DocumentDetailsRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.scout24.spider.model.DocumentDetails;
-import org.scout24.spider.repository.DocumentDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;

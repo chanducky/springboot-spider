@@ -4,15 +4,15 @@ package org.scout24.spider;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.cky.spider.controller.CrawlerController;
+import org.cky.spider.controller.HomeController;
+import org.cky.spider.exceptions.GlobalExceptionHandler;
+import org.cky.spider.repository.DocumentDetailsRepository;
+import org.cky.spider.repository.HyperMediaLinkRepository;
+import org.cky.spider.scheduler.MemoryCleanupTask;
+import org.cky.spider.service.CrawlerService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.scout24.spider.controller.CrawlerController;
-import org.scout24.spider.controller.HomeController;
-import org.scout24.spider.exceptions.GlobalExceptionHandler;
-import org.scout24.spider.repository.DocumentDetailsRepository;
-import org.scout24.spider.repository.HyperMediaLinkRepository;
-import org.scout24.spider.scheduler.MemoryCleanupTask;
-import org.scout24.spider.service.CrawlerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -39,10 +39,6 @@ public class ContextLoadTest {
 
 	@Autowired
     private MemoryCleanupTask memoryCleanupTask;
-	
-	@Autowired
-    private GlobalExceptionHandler globalExceptionHandler;
-	
 	
 	@Test
     public void contexLoadsHomeController() throws Exception {
@@ -71,11 +67,6 @@ public class ContextLoadTest {
 	@Test
     public void contexLoadsMemoryCleanupTask() throws Exception {
         assertThat(memoryCleanupTask).isNotNull();
-    }
-	
-	@Test
-    public void contexLoadsglobalExceptionHandler() throws Exception {
-        assertThat(globalExceptionHandler).isNotNull();
     }
 	
 

@@ -6,10 +6,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 
+import org.cky.spider.model.HyperMediaLink;
+import org.cky.spider.repository.HyperMediaLinkRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.scout24.spider.model.HyperMediaLink;
-import org.scout24.spider.repository.HyperMediaLinkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
